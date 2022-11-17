@@ -1,0 +1,13 @@
+<mat-card class="question-card">
+    <mat-card-title>{{questions[questionIndex].question}}</mat-card-title>
+    <mat-card-subtitle>Question n°{{ questionNumber }}/{{numberOfQuestions}}</mat-card-subtitle>
+    <mat-card-content>
+        <p class="questopn-option" (click)="checkAnswer(option ,questions[questionIndex].correctAnswer)"
+            *ngFor="let option of getQuestionOptions(questions[questionIndex]) | randomizeOrder">
+            {{option}}</p>
+    </mat-card-content>
+    {{correctAnswers}}
+    <!-- <mat-card-actions>
+        <button mat-button>Skip</button>
+    </mat-card-actions> -->
+</mat-card>

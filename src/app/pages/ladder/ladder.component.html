@@ -1,0 +1,15 @@
+<!-- {{displayedColumns}} -->
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let header of displayedColumns">
+        {{header}}
+      </th>
+    </tr>
+  </thead>
+  <tr *ngFor="let scoreboard of ladder;let index=index">
+    <td>{{ index }}</td>
+    <td>{{ scoreboard.username }}</td>
+    <td>{{ scoreboard.score }}</td>
+  </tr>
+</table>
